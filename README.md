@@ -64,11 +64,13 @@ go run ./scripts/bench     # Generate benchmarks
 
 | № | Problem | Difficulty | Tags | Solution | Benchmark |
 |---|:-----:|:--------:|:--:|------|:------:|
-| 1 | [Two Sum](./leetcode/1-Two_Sum) | Easy | `Arrays`, `Hash Tables` | [Code](leetcode/1-Two_Sum/solution.go) | [Benchmark](./leetcode/1-Two_Sum/iterations/bench.md) |
+| 1 | [Two Sum](./leetcode/1-Two_Sum) | Easy | `Arrays`, `Hash Tables` | [Code](./leetcode/1-Two_Sum/solution.go) | [Benchmark](./leetcode/1-Two_Sum/iterations/bench.md) |
 
 ### Codewars
 
-**Coming soon**
+| № | Problem | Difficulty | Tags | Solution | Benchmark |
+|---|:-----:|:--------:|:--:|------|:------:|
+| 1 | [Maximum subarray sum](./codewars/5kyu-Maximum_subarray_sum/) | 5 kyu | `Arrays` | [Code](./codewars/5kyu-Maximum_subarray_sum/solution.go) | [Benchmark](./codewars/5kyu-Maximum_subarray_sum/iterations/bench.md) |
 
 ### Tags
 
