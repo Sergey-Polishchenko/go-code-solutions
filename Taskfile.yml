@@ -1,0 +1,57 @@
+version: '3'
+
+vars:
+  GO_TEST_FLAGS: "-v -race -cover -p 4"
+  GO_BENCH_FLAGS: "-v -p 4"
+  SOLUTION_PLATFORMS: "./leetcode/... ./codewars/..."
+
+tasks:
+  new:
+    desc: "Create new solution directory (example: task new leetcode '1. Two Sum' easy)"
+    cmds:
+       - go run ./scripts/new {{.CLI_ARGS}}
+    silent: true
+
+  gen-bench:
+    desc: "Create all bench reports for solution iterations"
+    cmds:
+      - go run ./scripts/bench
+    silent: true
+
+  test:
+    desc: "Run test for selected solution (example: task test ./leetcode/1-Two_Sum)"
+    cmds:
+      - go test {{.CLI_ARGS}} {{.GO_TEST_FLAGS}}
+      - go test {{.CLI_ARGS}}/iterations {{.GO_TEST_FLAGS}}
+    silent: true
+
+  bench:
+    desc: "Run bench test for selected solution (example: task bench ./leetcode/1-Two_Sum)"
+    cmds:
+      - go test -bench=. -benchmem {{.CLI_ARGS}}/iterations {{.GO_BENCH_FLAGS}}
+    silent: true
+
+  test-all:
+    desc: "Run all tests"
+    cmds:
+      - go test {{.SOLUTION_PLATFORMS}} {{.GO_TEST_FLAGS}}
+
+  bench-all:
+    desc: "Run all bench tests"
+    cmds:
+      - go test -bench=. {{.SOLUTION_PLATFORMS}} {{.GO_BENCH_FLAGS}}
+
+  clean:
+    desc: "Clean cached tests"
+    cmds:
+      - go clean -testcache
+
+  lint:
+    desc: "Run linter"
+    cmds:
+      - golangci-lint run ./... -v
+
+  list:
+    desc: "Lookup all solutions"
+    cmds:
+      - find leetcode codewars -mindepth 1 -maxdepth 1 -type d

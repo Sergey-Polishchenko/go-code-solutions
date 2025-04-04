@@ -1,15 +1,34 @@
-linters:
-  disable-all: true
-  enable:
-    - gofmt
-    - goimports
-    - govet
-    - staticcheck
-    - typecheck
-    - errcheck
-    - unused
+run:
+  timeout: 5m
+  modules-download-mode: readonly
+
+linters-settings:
+  revive:
+    rules:
+      - name: package-comments
+        disabled: true
+      - name: exported
+        disabled: true
 
 issues:
   exclude-use-default: false
-  max-issues-per-linter: 0
-  max-same-issues: 0
+  exclude-dirs:
+    - vendor
+    - go/pkg/mod
+
+  exclude-rules:
+    - path: go/pkg/mod/.*
+      linters:
+        - all
+
+linters:
+  enable:
+    - revive
+    - govet
+    - errcheck
+    - staticcheck
+    - gosimple
+  disable:
+    - typecheck
+    - wsl
+    - dupl
