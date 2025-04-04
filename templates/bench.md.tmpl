@@ -1,0 +1,11 @@
+# {{.Task}} Benchmarks
+
+**Last run:** {{.LastRun}}  
+**Go version:** {{.GoVersion}}  
+**CPU:** {{.CPU}}
+{{range $size, $results := .BenchResults}}
+## {{$size}} Dataset
+| Algorithm | Runs | ns/op | Alloc (B/op) | Allocs (op) |
+|-----------|-----:|------:|-------------:|------------:|
+{{range $results}}| {{.Name}} | {{.Runs | formatNumber}} | {{.NsPerOp}} | {{.MemAlloc}} | {{.MemOps}} |
+{{end}}{{end}}
