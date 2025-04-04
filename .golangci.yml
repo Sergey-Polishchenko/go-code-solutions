@@ -1,0 +1,15 @@
+linters:
+  disable-all: true
+  enable:
+    - gofmt
+    - goimports
+    - govet
+    - staticcheck
+    - typecheck
+    - errcheck
+    - unused
+
+issues:
+  exclude-use-default: false
+  max-issues-per-linter: 0
+  max-same-issues: 0
