@@ -65,6 +65,7 @@ go run ./scripts/bench     # Generate benchmarks
 | № | Problem | Difficulty | Tags | Solution | Benchmark |
 |---|:-----:|:--------:|:--:|------|:------:|
 | 1 | [Two Sum](./leetcode/1-Two_Sum) | Easy | `Arrays`, `Hash Tables` | [Code](./leetcode/1-Two_Sum/solution.go) | [Benchmark](./leetcode/1-Two_Sum/iterations/bench.md) |
+| 2 | [Add Two Numbers](./leetcode/2-Add_Two_Numbers/) | Medium | `Linked List` | [Code](./leetcode/2-Add_Two_Numbers/solution.go) | [Benchmark](./leetcode/2-Add_Two_Numbers/iterations/bench.md) |
 
 ### Codewars
 
