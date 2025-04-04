@@ -7,9 +7,11 @@ import (
 	"github.com/Sergey-Polishchenko/go-code-solutions/codewars/5kyu-Maximum_subarray_sum/testdata"
 )
 
+type solution func([]int) int
+
 var solutions = []struct {
 	name string
-	fn   func([]int) int
+	fn   solution
 }{
 	{"Bruteforce", SolutionV1},
 	{"Kadane's Algorithm", SolutionV2},
@@ -61,7 +63,7 @@ func BenchmarkSolutions(b *testing.B) {
 	}
 }
 
-func benchSolution(b *testing.B, solution func([]int) int, nums []int) {
+func benchSolution(b *testing.B, solution solution, nums []int) {
 	b.ResetTimer()
 	b.ReportAllocs()
 

@@ -7,9 +7,11 @@ import (
 	"github.com/Sergey-Polishchenko/go-code-solutions/leetcode/1-Two_Sum/testdata"
 )
 
+type solution func([]int, int) []int
+
 var solutions = []struct {
 	name string
-	fn   func([]int, int) []int
+	fn   solution
 }{
 	{"BruteForce", SolutionV1},
 	{"Optimized", SolutionV2},
@@ -61,7 +63,7 @@ func BenchmarkSolutions(b *testing.B) {
 	}
 }
 
-func benchSolution(b *testing.B, solution func([]int, int) []int, nums []int, target int) {
+func benchSolution(b *testing.B, solution solution, nums []int, target int) {
 	b.ResetTimer()
 	b.ReportAllocs()
 

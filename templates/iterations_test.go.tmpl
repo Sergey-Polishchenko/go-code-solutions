@@ -7,9 +7,11 @@ import (
 	"github.com/Sergey-Polishchenko/go-code-solutions/{{.PackageDir}}/testdata"
 )
 
+type solution func() any
+
 var solutions = []struct {
 	name string
-	fn   func() any
+	fn   solution 
 }{
 	{"V1", SolutionV1},
 }
@@ -58,7 +60,7 @@ func BenchmarkSolutions(b *testing.B) {
 	}
 }
 
-func benchSolution(b *testing.B, solution func() any) {
+func benchSolution(b *testing.B, solution solution) {
 	b.ResetTimer()
 	b.ReportAllocs()
 
