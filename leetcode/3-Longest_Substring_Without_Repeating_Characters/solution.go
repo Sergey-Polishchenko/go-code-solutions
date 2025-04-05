@@ -1,21 +1,15 @@
 // 3. Longest Substring Without Repeating Characters
 package longest_substring_without_repeating_characters
 
-import (
-	"strings"
-)
-
 // Solution for Longest Substring Without Repeating Characters
 // Difficulty: O(n)
 func Solution(s string) int {
-	var sub string
-	var maxLen int
-	for _, r := range s {
-		if index := strings.IndexRune(sub, r); index != -1 {
-			sub = sub[index+1:]
-		}
-		sub += string(r)
-		maxLen = max(maxLen, len(sub))
+	runePos := map[rune]int{}
+	res, left := 0, 0
+	for i, r := range s {
+		left = max(left, runePos[r])
+		runePos[r] = i + 1
+		res = max(res, i-left+1)
 	}
-	return maxLen
+	return res
 }

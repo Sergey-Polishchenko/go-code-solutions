@@ -15,6 +15,7 @@ var solutions = []struct {
 	fn   solution
 }{
 	{"V1", SolutionV1},
+	{"V2", SolutionV2},
 }
 
 var benchCases = []struct {

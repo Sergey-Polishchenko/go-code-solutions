@@ -5,7 +5,7 @@ import (
 )
 
 // Solution for Longest Substring Without Repeating Characters
-// Difficulty: O(n)
+// Difficulty: O(n^2) (using IndexRune iterate over string)
 func SolutionV1(s string) int {
 	var sub string
 	var maxLen int
