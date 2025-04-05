@@ -67,6 +67,7 @@ go run ./scripts/bench     # Generate benchmarks
 | 1 | [Two Sum](./leetcode/1-Two_Sum) | Easy | `Arrays`, `Hash Tables` | [Code](./leetcode/1-Two_Sum/solution.go) | [Benchmark](./leetcode/1-Two_Sum/iterations/bench.md) |
 | 2 | [Add Two Numbers](./leetcode/2-Add_Two_Numbers/) | Medium | `Linked List` | [Code](./leetcode/2-Add_Two_Numbers/solution.go) | [Benchmark](./leetcode/2-Add_Two_Numbers/iterations/bench.md) |
 | 3 | [Longest Substring Without Repeating Characters](./leetcode/3-Longest_Substring_Without_Repeating_Characters/) | Medium | `Strings` | [Code](./leetcode/3-Longest_Substring_Without_Repeating_Characters/solution.go) | [Benchmark](./leetcode/3-Longest_Substring_Without_Repeating_Characters/iterations/bench.md) |
+| 4 | [Median of Two Sorted Arrays](./leetcode/4-Median_of_Two_Sorted_Arrays/) | Hard | `Arrays`, `Bin Search` | [Code](./leetcode/4-Median_of_Two_Sorted_Arrays/solution.go) | [Benchmark](./leetcode/4-Median_of_Two_Sorted_Arrays/iterations/bench.md) |
 
 ### Codewars
 
@@ -77,7 +78,7 @@ go run ./scripts/bench     # Generate benchmarks
 ### Tags
 
 ```text
-Arrays, Hash Tables, Graphs, Linked Lists, Strings, Sort
+Arrays, Hash Tables, Graphs, Linked Lists, Strings, Sort, Bin Search
 ```
 
 ---
