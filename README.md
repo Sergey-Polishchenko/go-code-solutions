@@ -104,11 +104,83 @@ Arrays, Hash Tables, Graphs, Linked Lists, Strings, Sort, Bin Search
 
 ## TODO:
 
-- [ ] Add leetcode/codewars scraper for automatic creation directory for solution by URL.
-- [ ] Codecov configuration for test coverage monitoring.
-- [ ] Add tests for scripts.
-- [ ] Make better templates.
-- [ ] Readme generator for new problems.
+### 1. Automation of LeetCode/Codewars Problem Parsing
+
+- [ ] Implement a basic parser to:
+    - Extract problem number/title from the URL
+    - Generate directory structure based on a template
+
+- [ ] Integrate with LeetCode API to:
+    - Auto-fill problem.md (description, examples, constraints)
+    - Generate basic test cases in testdata/
+
+- [ ] Support for Codewars:
+    - Parse kata description
+    - Automatically classify by difficulty (kyu level)
+
+### 2. Test Coverage Monitoring
+
+- [ ] Set up Codecov:
+    - Add -coverprofile to test commands
+    - Integrate with GitHub Actions
+    - Badge in README + reports for pull requests
+
+- [ ] Add minimum coverage requirements (85% for new solutions)
+
+### 3. Script Testing
+
+- [ ] Write tests for:
+    - New problem generator (scripts/new)
+    - Benchmark scripts (scripts/bench)
+    - Template validation
+
+- [ ] Create test scenarios:
+    - File creation correctness
+    - Input error handling
+    - Benchmark report formatting
+
+### 4. Template Improvements
+
+- [ ] Universal templates for:
+    - Graph problems (Node structure)
+    - Dynamic programming (DP table)
+    - Tree-based problems
+
+- [ ] Context-aware comments:
+    - Auto-generate complexity descriptions
+    - Example usage in godoc
+
+- [ ] Support for multi-file solutions:
+    - Helper function packages
+    - Alternative implementations
+
+### 5. README Generator
+
+- [ ] Script for:
+    - Auto-updating solution table
+    - Parsing metadata from problem.md
+    - Sorting by number/difficulty
+
+- [ ] Support for:
+    - Filter tags
+    - Difficulty statistics
+    - Links to solution iterations
+
+### 6. Solution Documentation
+
+- [ ] For each solution, include:
+    - Detailed algorithm explanation
+    - Time and space complexity
+    - ASCII diagram of the process
+    - Links to related algorithms
+
+- [ ] Unified comment style:
+    ```text
+    // Solution for Two Sum problem
+    // Approach: Hash Map One-pass
+    // Time: O(n), Space: O(n)
+    // Optimization: Early exit on duplicate pairs
+    ```
 
 ---
 
