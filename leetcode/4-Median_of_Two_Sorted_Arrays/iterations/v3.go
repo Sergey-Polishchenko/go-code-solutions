@@ -1,6 +1,7 @@
 package median_of_two_sorted_arrays_iterations
 
-// TODO: Solution description
+// Good solution usig Bin Search for Median of Two Sorted Arrays
+// Dificulty: O(log(m+n))
 func SolutionV3(nums1, nums2 []int) float64 {
 	if len(nums1) > len(nums2) {
 		nums1, nums2 = nums2, nums1
