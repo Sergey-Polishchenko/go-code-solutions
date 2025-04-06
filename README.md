@@ -68,6 +68,7 @@ go run ./scripts/bench     # Generate benchmarks
 | 2 | [Add Two Numbers](./leetcode/2-Add_Two_Numbers/) | Medium | `Linked List` | [Code](./leetcode/2-Add_Two_Numbers/solution.go) | [Benchmark](./leetcode/2-Add_Two_Numbers/iterations/bench.md) |
 | 3 | [Longest Substring Without Repeating Characters](./leetcode/3-Longest_Substring_Without_Repeating_Characters/) | Medium | `Strings` | [Code](./leetcode/3-Longest_Substring_Without_Repeating_Characters/solution.go) | [Benchmark](./leetcode/3-Longest_Substring_Without_Repeating_Characters/iterations/bench.md) |
 | 4 | [Median of Two Sorted Arrays](./leetcode/4-Median_of_Two_Sorted_Arrays/) | Hard | `Arrays`, `Bin Search` | [Code](./leetcode/4-Median_of_Two_Sorted_Arrays/solution.go) | [Benchmark](./leetcode/4-Median_of_Two_Sorted_Arrays/iterations/bench.md) |
+| 5 | [Longest Palindromic Substring](./leetcode/5-Longest_Palindromic_Substring/) | Medium | `Strings` | [Code](./leetcode/5-Longest_Palindromic_Substring/solution.go) | [Benchmark](./leetcode/5-Longest_Palindromic_Substring/iterations/bench.md) |
 
 ### Codewars
 
