@@ -75,6 +75,7 @@ go run ./scripts/bench     # Generate benchmarks
 | № | Problem | Difficulty | Tags | Solution | Benchmark |
 |---|:-----:|:--------:|:--:|------|:------:|
 | 1 | [Maximum subarray sum](./codewars/5kyu-Maximum_subarray_sum/) | 5 kyu | `Arrays` | [Code](./codewars/5kyu-Maximum_subarray_sum/solution.go) | [Benchmark](./codewars/5kyu-Maximum_subarray_sum/iterations/bench.md) |
+| 2 | [Directions Reduction](./codewars/5kyu-Directions_Reduction/) | 5 kyu | `Arrays`, `Strings` | [Code](./codewars/5kyu-Directions_Reduction/solution.go) | [Benchmark](./codewars/5kyu-Directions_Reduction/iterations/bench.md) |
 
 ### Tags
 
